@@ -32,7 +32,18 @@ if (file_exists($local_settings)) {
 }
 
 /**
- * Always install the 'standard' profile to stop the installer from
+ * Always install the 'river' profile to stop the installer from
  * modifying settings.php.
  */
-$settings['install_profile'] = 'standard';
+$settings['install_profile'] = 'river';
+$databases['default']['default'] = array (
+  'database' => 'default',
+  'username' => 'user',
+  'password' => 'user',
+  'prefix' => '',
+  'host' => 'db',
+  'port' => '3306',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+);
+$settings['hash_salt'] = 'gVO0YCI9YN71Zsn1zPjQy9QF5puEB3XNHqrYQJxqUmCPmQVC4p0WtbOGuazjYEHS1cblN4rqng';
